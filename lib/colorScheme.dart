@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+//The color scheme of the project, updating this should show
+//changes throughout the shopping list, edit accordingly
 class ColorOptions {
   static MaterialColor colorscheme =
       const MaterialColor(_colorschemePrimaryValue, <int, Color>{

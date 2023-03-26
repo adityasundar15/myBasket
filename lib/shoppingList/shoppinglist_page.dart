@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:intl/intl.dart';
 
-import '/colorScheme.dart';
-import 'db_helper.dart';
-import 'shopping_item.dart';
+//Used for the sort dialog box animation
+import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';
+
+import '/colorScheme.dart'; //Color scheme of project
+import 'db_helper.dart'; //Database helper
+import 'shopping_item.dart'; //The ShoppingItem object
 
 class ShoppingList extends StatefulWidget {
   const ShoppingList({Key? key}) : super(key: key);
@@ -14,20 +17,22 @@ class ShoppingList extends StatefulWidget {
 }
 
 class _ShoppingListState extends State<ShoppingList> {
-  List<ShoppingItem> _shoppingItems = [];
-  late Future<List<ShoppingItem>> _shoppingItemsFuture;
+  List<ShoppingItem> _shoppingItems = []; //initialize
+  late Future<List<ShoppingItem>>
+      _shoppingItemsFuture; //made to facilitate rebuilding
 
   int itemFilter = 0;
 
   @override
   void initState() {
     super.initState();
-    _shoppingItemsFuture = _loadItems(9);
+    _shoppingItemsFuture = _loadItems(9); //random number other than 0, 1, 2
   }
 
   Future<List<ShoppingItem>> _loadItems(int filter) async {
     //await DatabaseHelper.instance.resetDatabase(); //CAREFUL
     final items = await DatabaseHelper.instance.getItems();
+    //Filtering
     switch (filter) {
       case 2:
         //await Future.delayed(Duration(milliseconds: 100));
@@ -76,6 +81,7 @@ class _ShoppingListState extends State<ShoppingList> {
     });
   }
 
+  //Add item dialog box
   void _showAddItemModalBottomSheet() {
     final itemNameController = TextEditingController();
     final itemQuantityController = TextEditingController();
@@ -92,8 +98,8 @@ class _ShoppingListState extends State<ShoppingList> {
             decoration: BoxDecoration(
               color: ColorOptions.colorscheme[700]!,
               borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(16.0),
-                topRight: Radius.circular(16.0),
+                topLeft: Radius.circular(12.0),
+                topRight: Radius.circular(12.0),
               ),
             ),
             padding: const EdgeInsets.all(16.0),
@@ -165,6 +171,7 @@ class _ShoppingListState extends State<ShoppingList> {
     );
   }
 
+  //Edit item dialog box
   void _showEditItemModalBottomSheet(ShoppingItem item, int index) {
     final newNameController = TextEditingController(text: item.name);
     final newQuantityController =
@@ -251,31 +258,45 @@ class _ShoppingListState extends State<ShoppingList> {
     );
   }
 
-  // Initialize the default selection values
+  // Initialize the default selection values for filtering
   var selectedOptionIndex = 1; // Date Added is selected by default
   var selectedSortOrderIndex = 0; // Ascending is selected by default
   Future<List<ShoppingItem>> _showFilterBox() async {
     // Define the available options for filtering and sorting
     final options = ['Name', 'Date Added', 'Quantity'];
 
-    List<ShoppingItem> _tempshoppingItems = [];
+    List<ShoppingItem> tempshoppingItems = [];
 
     // Show the filter dialog
-    await showDialog(
+    await showAnimatedDialog(
+      animationType: DialogTransitionType.slideFromBottomFade,
+      duration: const Duration(milliseconds: 200),
+      barrierDismissible: true,
       context: context,
       builder: (BuildContext context) {
         return StatefulBuilder(
           builder: (context, setState) {
             return AlertDialog(
-              title: const Text('Filter Options'),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(16.0)),
+              backgroundColor: ColorOptions.colorscheme[500],
+              title: Text(
+                'Filter Options',
+                style: TextStyle(color: ColorOptions.colorscheme[100]),
+              ),
               content: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   // Show the available filtering options as radio buttons
                   for (int i = 0; i < options.length; i++)
                     ListTile(
-                      title: Text(options[i]),
+                      title: Text(
+                        options[i],
+                        style: TextStyle(color: ColorOptions.colorscheme[50]),
+                      ),
                       leading: Radio(
+                        fillColor: MaterialStateProperty.all<Color>(
+                            ColorOptions.colorscheme[50]!),
                         value: i,
                         groupValue: selectedOptionIndex,
                         onChanged: (value) {
@@ -292,56 +313,75 @@ class _ShoppingListState extends State<ShoppingList> {
                     ),
                   // Show the available sorting order options as radio buttons
                   const SizedBox(height: 10),
-                  const Divider(),
+                  Divider(color: ColorOptions.colorscheme[50]),
                   const SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text('Sort Order: '),
+                      Text(
+                        'Sort Order: ',
+                        style: TextStyle(color: ColorOptions.colorscheme[50]),
+                      ),
                       IconButton(
                         onPressed: () {
                           setState(() {
                             selectedSortOrderIndex =
-                                selectedSortOrderIndex == 0 ? 1 : 0;
+                                selectedSortOrderIndex != 0 ? 1 : 0;
                           });
                         },
                         icon: selectedSortOrderIndex == 0
-                            ? const Icon(Icons.arrow_upward)
-                            : const Icon(Icons.arrow_downward),
+                            ? Icon(Icons.arrow_upward,
+                                color: ColorOptions.colorscheme[50])
+                            : Icon(Icons.arrow_downward,
+                                color: ColorOptions.colorscheme[50]),
                       ),
                     ],
                   ),
                 ],
               ),
               actions: [
-                TextButton(
-                  child: const Text('CANCEL'),
+                ElevatedButton(
+                  style: ButtonStyle(
+                      foregroundColor: MaterialStateProperty.all<Color>(
+                          ColorOptions.colorscheme[50]!),
+                      minimumSize:
+                          MaterialStateProperty.all<Size>(const Size(90, 43))),
+                  child: Text(
+                    'CANCEL',
+                    style: TextStyle(color: ColorOptions.colorscheme[50]),
+                  ),
                   onPressed: () {
                     Navigator.pop(context);
                   },
                 ),
                 ElevatedButton(
-                  child: const Text('APPLY'),
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          ColorOptions.colorscheme[50]!),
+                      minimumSize:
+                          MaterialStateProperty.all<Size>(const Size(90, 40))),
+                  child: Text('APPLY',
+                      style: TextStyle(color: ColorOptions.colorscheme[900])),
                   onPressed: () {
                     setState(() {
                       // Sort the list based on the selected option and sorting order
                       switch (selectedOptionIndex) {
                         case 0: // Name
-                          _tempshoppingItems = [..._shoppingItems]..sort(
+                          tempshoppingItems = [..._shoppingItems]..sort(
                               (a, b) =>
                                   a.name.compareTo(b.name) *
                                   (selectedSortOrderIndex == 0 ? 1 : -1));
                           print('Sorted by Name');
                           break;
                         case 1: // Date Added
-                          _tempshoppingItems = [..._shoppingItems]..sort(
+                          tempshoppingItems = [..._shoppingItems]..sort(
                               (a, b) =>
                                   a.id!.compareTo(b.id!) *
                                   (selectedSortOrderIndex == 0 ? 1 : -1));
                           print('Sorted by Date Added');
                           break;
                         case 2: // Quantity
-                          _tempshoppingItems = [..._shoppingItems]..sort(
+                          tempshoppingItems = [..._shoppingItems]..sort(
                               (a, b) =>
                                   a.quantity.compareTo(b.quantity) *
                                   (selectedSortOrderIndex == 0 ? 1 : -1));
@@ -358,12 +398,12 @@ class _ShoppingListState extends State<ShoppingList> {
         );
       },
     );
-    return _tempshoppingItems;
+    return tempshoppingItems;
   }
 
   Widget _buildItem(ShoppingItem item, int index) {
     return AnimatedContainer(
-      duration: Duration(milliseconds: 500),
+      duration: const Duration(milliseconds: 500),
       curve: Curves.bounceInOut,
       child: Card(
         color: !item.isBought
@@ -414,6 +454,7 @@ class _ShoppingListState extends State<ShoppingList> {
                           DatabaseHelper.instance.unbuyItem(item.id!);
                         }
                         if (itemFilter != 0) {
+                          //Uncomment below code if you want to update list real-time in bought and unbought views
                           //_shoppingItemsFuture = _loadItems(itemFilter);
                         }
                       });
@@ -478,6 +519,7 @@ class _ShoppingListState extends State<ShoppingList> {
               bottom: Radius.circular(2),
             ),
           ),
+          //The three options on top
           actions: [
             Container(
               padding: const EdgeInsets.fromLTRB(0, 10.0, 10.0, 9.0),
@@ -521,6 +563,7 @@ class _ShoppingListState extends State<ShoppingList> {
             future: _shoppingItemsFuture,
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
+                //Image used as loading screen
                 return Center(
                   child: Image.asset(
                     'assets/img/icon.png',
@@ -551,6 +594,7 @@ class _ShoppingListState extends State<ShoppingList> {
           ),
         ),
       ),
+      //The two floating buttons on the page
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: Container(
         padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 20.0),

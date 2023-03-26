@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:table_calendar/table_calendar.dart';
+import 'package:table_calendar/table_calendar.dart'; //Calendar dependency
 
+//The color scheme of the project
 import '/colorScheme.dart';
 
 class homePage extends StatefulWidget {

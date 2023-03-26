@@ -2,7 +2,7 @@ import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 import 'dart:io';
 import 'package:path_provider/path_provider.dart';
-import 'shopping_item.dart';
+import 'shopping_item.dart'; //The ShoppingItem object
 
 class DatabaseHelper {
   static final DatabaseHelper instance = DatabaseHelper._getInstance();
@@ -10,6 +10,7 @@ class DatabaseHelper {
 
   DatabaseHelper._getInstance();
 
+  //Create database and table if doesn't exist
   Future<Database> get database async {
     if (_database != null) {
       return _database!;
