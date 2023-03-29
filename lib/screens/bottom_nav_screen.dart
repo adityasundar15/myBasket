@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import './profile_screen.dart';
-import './shopping_list.dart';
+import '../shoppingList/shoppinglist_page.dart';
 import './stock_screen.dart';
 
 class TabScreen extends StatefulWidget {
@@ -19,28 +19,6 @@ class _TabScreenState extends State<TabScreen> {
     {'page': ProfileScreen(), 'title': 'Profile'}
   ];
   int _selectedPageIndex = 0;
-
-  // final List<FloatingActionButton> fabs = [
-  //   FloatingActionButton(
-  //     child: const Icon(Icons.add),
-  //     onPressed: () {},
-  //   ),
-  //   FloatingActionButton(
-  //     child: const Icon(Icons.add),
-  //     onPressed: () {},
-  //   ),
-  //   FloatingActionButton(
-  //     child: const Icon(Icons.document_scanner),
-  //     onPressed: () {},
-  //   )
-  // ];
-
-  Widget showActionButton(int pageIndex) {
-    if (pageIndex == 0) {
-      return const Placeholder();
-    }
-    return const Placeholder();
-  }
 
   void _setPage(int index) {
     setState(() {
@@ -67,16 +45,6 @@ class _TabScreenState extends State<TabScreen> {
           style: const TextStyle(fontSize: 28),
         ),
         foregroundColor: Theme.of(context).primaryColor,
-        // actions: [
-        //   _selectedPageIndex == 0
-        //       ? IconButton(
-        //           onPressed: changeScreen,
-        //           icon: Icon(
-        //             Icons.warning_amber,
-        //             color: Colors.amber[700],
-        //           ))
-        //       : Text('')
-        // ],
       ),
       body: _pages[_selectedPageIndex]['page'] as Widget,
       bottomNavigationBar: BottomNavigationBar(
