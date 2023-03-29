@@ -448,7 +448,7 @@ class _ShoppingListState extends State<ShoppingList> {
                         item.isBought = value!;
                         if (item.isBought) {
                           item.timeBought = DateTime.now().toString();
-                          DatabaseHelper.instance.buyItem(item.id!);
+                          DatabaseHelper.instance.buyItem(item.id!, item.name);
                         } else {
                           item.timeBought = null;
                           DatabaseHelper.instance.unbuyItem(item.id!);

@@ -1,6 +1,8 @@
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 import 'dart:io';
+import 'dart:convert';
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:path_provider/path_provider.dart';
 import 'shopping_item.dart'; //The ShoppingItem object
 
@@ -43,7 +45,10 @@ class DatabaseHelper {
         name TEXT,
         quantity INTEGER,
         isBought INTEGER NOT NULL DEFAULT 0,
-        timeBought TEXT
+        timeBought TEXT,
+        fridgeExpiryDate TEXT,
+        shelfExpiryDate TEXT,
+        category TEXT
       )
     ''');
   }
@@ -86,13 +91,36 @@ class DatabaseHelper {
     print('$id has been removed');
   }
 
-  Future<void> buyItem(int id) async {
+  Future<void> buyItem(int id, String name) async {
     final db = await database;
+
+    // Read the JSON data from the file
+    final jsonString = await rootBundle.loadString('assets/expdate.json');
+    final jsonData = json.decode(jsonString);
+
+    final item = jsonData.firstWhere(
+      (item) =>
+          item['ProductName'].toString().toLowerCase() == name.toLowerCase(),
+      orElse: () => null,
+    );
+
+    final fridgeLife = item['FridgeLife'];
+    final shelfLife = item['ShelfLife'];
+    final category = item['Category'];
+
     await db.update(
       'shopping_items',
-      {'isBought': 1, 'timeBought': DateTime.now().toString()},
-      where: 'id = ?',
-      whereArgs: [id],
+      {
+        'isBought': 1,
+        'timeBought': DateTime.now().toString(),
+        'fridgeExpiryDate':
+            DateTime.now().add(Duration(days: fridgeLife)).toString(),
+        'shelfExpiryDate':
+            DateTime.now().add(Duration(days: shelfLife)).toString(),
+        'category': category,
+      },
+      where: 'name = ?',
+      whereArgs: [name],
     );
     print('item $id has been marked as bought');
   }
@@ -101,7 +129,13 @@ class DatabaseHelper {
     final db = await database;
     await db.update(
       'shopping_items',
-      {'isBought': 0, 'timeBought': null},
+      {
+        'isBought': 0,
+        'timeBought': null,
+        'fridgeExpiryDate': null,
+        'shelfExpiryDate': null,
+        'category': null
+      },
       where: 'id = ?',
       whereArgs: [id],
     );
