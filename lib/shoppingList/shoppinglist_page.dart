@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
 import 'dart:async';
 import 'package:intl/intl.dart';
 
@@ -507,6 +509,12 @@ class _ShoppingListState extends State<ShoppingList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          systemOverlayStyle: const SystemUiOverlayStyle(
+            statusBarColor: Colors.black,
+            statusBarBrightness: Brightness.light,
+            statusBarIconBrightness: Brightness.dark,
+          ),
+          centerTitle: false,
           title: Row(
             children: const [
               Text('Shopping List'),

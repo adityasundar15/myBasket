@@ -3,636 +3,636 @@
     "ProductName": "Apples",
     "FridgeLife": 7,
     "ShelfLife": 4,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Bananas",
     "FridgeLife": 7,
     "ShelfLife": 4,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Oranges",
     "FridgeLife": 7,
     "ShelfLife": 4,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Grapes",
     "FridgeLife": 7,
     "ShelfLife": 4,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Strawberries",
     "FridgeLife": 7,
     "ShelfLife": 4,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Blueberries",
     "FridgeLife": 5,
     "ShelfLife": 3,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Raspberries",
     "FridgeLife": 5,
     "ShelfLife": 3,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Blackberries",
     "FridgeLife": 5,
     "ShelfLife": 3,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Pineapple",
     "FridgeLife": 7,
     "ShelfLife": 4,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Mango",
     "FridgeLife": 7,
     "ShelfLife": 4,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Papaya",
     "FridgeLife": 7,
     "ShelfLife": 4,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Kiwi",
     "FridgeLife": 10,
     "ShelfLife": 7,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Watermelon",
     "FridgeLife": 7,
     "ShelfLife": 4,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Cantaloupe",
     "FridgeLife": 7,
     "ShelfLife": 4,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Honeydew",
     "FridgeLife": 7,
     "ShelfLife": 4,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Grapefruit",
     "FridgeLife": 5,
     "ShelfLife": 3,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Lemon",
     "FridgeLife": 7,
     "ShelfLife": 5,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Lime",
     "FridgeLife": 7,
     "ShelfLife": 5,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Avocado",
     "FridgeLife": 7,
     "ShelfLife": 4,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Tomatoes",
     "FridgeLife": 7,
     "ShelfLife": 5,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Cucumbers",
     "FridgeLife": 14,
     "ShelfLife": 7,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Bell peppers",
     "FridgeLife": 7,
     "ShelfLife": 4,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Carrots",
     "FridgeLife": 10,
     "ShelfLife": 7,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Celery",
     "FridgeLife": 5,
     "ShelfLife": 3,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Broccoli",
     "FridgeLife": 5,
     "ShelfLife": 2,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Cauliflower",
     "FridgeLife": 5,
     "ShelfLife": 3,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Spinach",
     "FridgeLife": 5,
     "ShelfLife": 3,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Lettuce",
     "FridgeLife": 4,
     "ShelfLife": 2,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Kale",
     "FridgeLife": 4,
     "ShelfLife": 2,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Cabbage",
     "FridgeLife": 4,
     "ShelfLife": 2,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Onions",
     "FridgeLife": 10,
     "ShelfLife": 5,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Garlic",
     "FridgeLife": 180,
     "ShelfLife": 90,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Potatoes",
     "FridgeLife": 180,
     "ShelfLife": 90,
-    "Category\r": "c\r"
+    "Category": "c"
   },
   {
     "ProductName": "Sweet potatoes",
     "FridgeLife": 180,
     "ShelfLife": 90,
-    "Category\r": "c\r"
+    "Category": "c"
   },
   {
     "ProductName": "Butternut squash",
     "FridgeLife": 120,
     "ShelfLife": 60,
-    "Category\r": "c\r"
+    "Category": "c"
   },
   {
     "ProductName": "Zucchini",
     "FridgeLife": 14,
     "ShelfLife": 5,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Eggplant",
     "FridgeLife": 14,
     "ShelfLife": 5,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Corn",
     "FridgeLife": 3,
     "ShelfLife": 2,
-    "Category\r": "c\r"
+    "Category": "c"
   },
   {
     "ProductName": "Green beans",
     "FridgeLife": 4,
     "ShelfLife": 2,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Peas",
     "FridgeLife": 3,
     "ShelfLife": 2,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Asparagus",
     "FridgeLife": 5,
     "ShelfLife": 3,
-    "Category\r": "v\r"
+    "Category": "v"
   },
   {
     "ProductName": "Mushrooms",
     "FridgeLife": 7,
     "ShelfLife": 4,
-    "Category\r": "c\r"
+    "Category": "c"
   },
   {
     "ProductName": "Bread",
     "FridgeLife": 5,
     "ShelfLife": 3,
-    "Category\r": "c\r"
+    "Category": "c"
   },
   {
     "ProductName": "Bagels",
     "FridgeLife": 5,
     "ShelfLife": 3,
-    "Category\r": "c\r"
+    "Category": "c"
   },
   {
     "ProductName": "English muffins",
     "FridgeLife": 3,
     "ShelfLife": 2,
-    "Category\r": "c\r"
+    "Category": "c"
   },
   {
     "ProductName": "Croissants",
     "FridgeLife": 3,
     "ShelfLife": 2,
-    "Category\r": "c\r"
+    "Category": "c"
   },
   {
     "ProductName": "Tortillas",
     "FridgeLife": 30,
     "ShelfLife": 7,
-    "Category\r": "c\r"
+    "Category": "c"
   },
   {
     "ProductName": "Rice",
     "FridgeLife": 730,
     "ShelfLife": 730,
-    "Category\r": "c\r"
+    "Category": "c"
   },
   {
     "ProductName": "Pasta",
     "FridgeLife": 730,
     "ShelfLife": 730,
-    "Category\r": "c\r"
+    "Category": "c"
   },
   {
     "ProductName": "Quinoa",
     "FridgeLife": 730,
     "ShelfLife": 730,
-    "Category\r": "c\r"
+    "Category": "c"
   },
   {
     "ProductName": "Couscous",
     "FridgeLife": 730,
     "ShelfLife": 730,
-    "Category\r": "c\r"
+    "Category": "c"
   },
   {
     "ProductName": "Oats",
     "FridgeLife": 730,
     "ShelfLife": 730,
-    "Category\r": "c\r"
+    "Category": "c"
   },
   {
     "ProductName": "Cereal",
     "FridgeLife": 730,
     "ShelfLife": 730,
-    "Category\r": "c\r"
+    "Category": "c"
   },
   {
     "ProductName": "Milk",
     "FridgeLife": 14,
     "ShelfLife": 3,
-    "Category\r": "d\r"
+    "Category": "d"
   },
   {
     "ProductName": "Yogurt",
     "FridgeLife": 14,
     "ShelfLife": 3,
-    "Category\r": "d\r"
+    "Category": "d"
   },
   {
     "ProductName": "Cheese",
     "FridgeLife": 12,
     "ShelfLife": 3,
-    "Category\r": "d\r"
+    "Category": "d"
   },
   {
     "ProductName": "Eggs",
     "FridgeLife": 28,
     "ShelfLife": 7,
-    "Category\r": "p\r"
+    "Category": "p"
   },
   {
     "ProductName": "Butter",
     "FridgeLife": 31,
     "ShelfLife": 5,
-    "Category\r": "d\r"
+    "Category": "d"
   },
   {
     "ProductName": "Margarine",
     "FridgeLife": 31,
     "ShelfLife": 5,
-    "Category\r": "d\r"
+    "Category": "d"
   },
   {
     "ProductName": "Peanut butter",
     "FridgeLife": 270,
     "ShelfLife": 120,
-    "Category\r": "o\r"
+    "Category": "o"
   },
   {
     "ProductName": "Jam",
     "FridgeLife": 270,
     "ShelfLife": 120,
-    "Category\r": "o\r"
+    "Category": "o"
   },
   {
     "ProductName": "Honey",
     "FridgeLife": 365,
     "ShelfLife": 365,
-    "Category\r": "o\r"
+    "Category": "o"
   },
   {
     "ProductName": "Maple syrup",
     "FridgeLife": 365,
     "ShelfLife": 365,
-    "Category\r": "o\r"
+    "Category": "o"
   },
   {
     "ProductName": "Sugar",
     "FridgeLife": 730,
     "ShelfLife": 730,
-    "Category\r": "o\r"
+    "Category": "o"
   },
   {
     "ProductName": "Flour",
     "FridgeLife": 730,
     "ShelfLife": 730,
-    "Category\r": "o\r"
+    "Category": "o"
   },
   {
     "ProductName": "Baking powder",
     "FridgeLife": 730,
     "ShelfLife": 730,
-    "Category\r": "o\r"
+    "Category": "o"
   },
   {
     "ProductName": "Baking soda",
     "FridgeLife": 730,
     "ShelfLife": 730,
-    "Category\r": "o\r"
+    "Category": "o"
   },
   {
     "ProductName": "Salt",
     "FridgeLife": 730,
     "ShelfLife": 730,
-    "Category\r": "o\r"
+    "Category": "o"
   },
   {
     "ProductName": "Pepper",
     "FridgeLife": 730,
     "ShelfLife": 730,
-    "Category\r": "o\r"
+    "Category": "o"
   },
   {
     "ProductName": "Spices",
     "FridgeLife": 730,
     "ShelfLife": 730,
-    "Category\r": "o\r"
+    "Category": "o"
   },
   {
     "ProductName": "Ketchup",
     "FridgeLife": 365,
     "ShelfLife": 365,
-    "Category\r": "o\r"
+    "Category": "o"
   },
   {
     "ProductName": "Mustard",
     "FridgeLife": 365,
     "ShelfLife": 365,
-    "Category\r": "o\r"
+    "Category": "o"
   },
   {
     "ProductName": "Mayonnaise",
     "FridgeLife": 365,
     "ShelfLife": 365,
-    "Category\r": "o\r"
+    "Category": "o"
   },
   {
     "ProductName": "Soy sauce",
     "FridgeLife": 365,
     "ShelfLife": 365,
-    "Category\r": "o\r"
+    "Category": "o"
   },
   {
     "ProductName": "Vinegar",
     "FridgeLife": 730,
     "ShelfLife": 730,
-    "Category\r": "o\r"
+    "Category": "o"
   },
   {
     "ProductName": "Olive oil",
     "FridgeLife": 730,
     "ShelfLife": 730,
-    "Category\r": "o\r"
+    "Category": "o"
   },
   {
     "ProductName": "Canola oil",
     "FridgeLife": 730,
     "ShelfLife": 730,
-    "Category\r": "o\r"
+    "Category": "o"
   },
   {
     "ProductName": "Coconut oil",
     "FridgeLife": 730,
     "ShelfLife": 730,
-    "Category\r": "o\r"
+    "Category": "o"
   },
   {
     "ProductName": "Nuts",
     "FridgeLife": 270,
     "ShelfLife": 120,
-    "Category\r": "o\r"
+    "Category": "o"
   },
   {
     "ProductName": "Dried fruits",
     "FridgeLife": 270,
     "ShelfLife": 120,
-    "Category\r": "o\r"
+    "Category": "o"
   },
   {
     "ProductName": "Chicken breast",
     "FridgeLife": 5,
     "ShelfLife": 2,
-    "Category\r": "p\r"
+    "Category": "p"
   },
   {
     "ProductName": "Turkey breast",
     "FridgeLife": 5,
     "ShelfLife": 2,
-    "Category\r": "p\r"
+    "Category": "p"
   },
   {
     "ProductName": "Ground beef",
     "FridgeLife": 5,
     "ShelfLife": 2,
-    "Category\r": "p\r"
+    "Category": "p"
   },
   {
     "ProductName": "Pork chops",
     "FridgeLife": 5,
     "ShelfLife": 2,
-    "Category\r": "p\r"
+    "Category": "p"
   },
   {
     "ProductName": "Salmon",
     "FridgeLife": 5,
     "ShelfLife": 2,
-    "Category\r": "p\r"
+    "Category": "p"
   },
   {
     "ProductName": "Tuna",
     "FridgeLife": 5,
     "ShelfLife": 2,
-    "Category\r": "p\r"
+    "Category": "p"
   },
   {
     "ProductName": "Tilapia",
     "FridgeLife": 5,
     "ShelfLife": 2,
-    "Category\r": "p\r"
+    "Category": "p"
   },
   {
     "ProductName": "Cod",
     "FridgeLife": 5,
     "ShelfLife": 2,
-    "Category\r": "p\r"
+    "Category": "p"
   },
   {
     "ProductName": "Shrimp",
     "FridgeLife": 5,
     "ShelfLife": 2,
-    "Category\r": "p\r"
+    "Category": "p"
   },
   {
     "ProductName": "Scallops",
     "FridgeLife": 5,
     "ShelfLife": 2,
-    "Category\r": "p\r"
+    "Category": "p"
   },
   {
     "ProductName": "Lobster",
     "FridgeLife": 1,
     "ShelfLife": 1,
-    "Category\r": "p\r"
+    "Category": "p"
   },
   {
     "ProductName": "Crab",
     "FridgeLife": 1,
     "ShelfLife": 1,
-    "Category\r": "p\r"
+    "Category": "p"
   },
   {
     "ProductName": "Cottage cheese",
     "FridgeLife": 7,
     "ShelfLife": 2,
-    "Category\r": "d\r"
+    "Category": "d"
   },
   {
     "ProductName": "Cheddar cheese",
     "FridgeLife": 7,
     "ShelfLife": 2,
-    "Category\r": "d\r"
+    "Category": "d"
   },
   {
     "ProductName": "Swiss cheese",
     "FridgeLife": 7,
     "ShelfLife": 2,
-    "Category\r": "d\r"
+    "Category": "d"
   },
   {
     "ProductName": "Mozzarella cheese",
     "FridgeLife": 7,
     "ShelfLife": 2,
-    "Category\r": "d\r"
+    "Category": "d"
   },
   {
     "ProductName": "Parmesan cheese",
     "FridgeLife": 31,
     "ShelfLife": 5,
-    "Category\r": "d\r"
+    "Category": "d"
   },
   {
     "ProductName": "Feta cheese",
     "FridgeLife": 7,
     "ShelfLife": 2,
-    "Category\r": "d\r"
+    "Category": "d"
   },
   {
     "ProductName": "Tofu",
     "FridgeLife": 7,
     "ShelfLife": 2,
-    "Category\r": "p\r"
+    "Category": "p"
   },
   {
     "ProductName": "Tempeh",
     "FridgeLife": 7,
     "ShelfLife": 2,
-    "Category\r": "p\r"
+    "Category": "p"
   },
   {
     "ProductName": "Edamame",
     "FridgeLife": 7,
     "ShelfLife": 5,
-    "Category\r": "d\r"
+    "Category": "d"
   },
   {
     "ProductName": "Lentils",
     "FridgeLife": 270,
     "ShelfLife": 270,
-    "Category\r": "c\r"
+    "Category": "c"
   },
   {
     "ProductName": "Chickpeas",
     "FridgeLife": 270,
     "ShelfLife": 270,
-    "Category\r": "c\r"
+    "Category": "c"
   },
   {
     "ProductName": "Black beans",
     "FridgeLife": 270,
     "ShelfLife": 270,
-    "Category\r": "c\r"
+    "Category": "c"
   },
   {
     "ProductName": "Kidney beans",
     "FridgeLife": 270,
     "ShelfLife": 270,
-    "Category\r": "c\r"
+    "Category": "c"
   },
   {
     "ProductName": "Brown rice",
     "FridgeLife": 270,
     "ShelfLife": 270,
-    "Category\r": "c\r\n"
+    "Category": "c\n"
   }
 ]

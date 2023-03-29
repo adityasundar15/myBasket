@@ -106,7 +106,24 @@ class DatabaseHelper {
 
     final fridgeLife = item['FridgeLife'];
     final shelfLife = item['ShelfLife'];
-    final category = item['Category'];
+    var category = item['Category'];
+    switch (category) {
+      case "v":
+        category = "vegetable";
+        break;
+      case "c":
+        category = "carbohydrates";
+        break;
+      case "p":
+        category = "protein";
+        break;
+      case "d":
+        category = "dairy";
+        break;
+      default:
+        category = "other";
+        break;
+    }
 
     await db.update(
       'shopping_items',

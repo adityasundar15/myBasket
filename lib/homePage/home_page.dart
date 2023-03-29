@@ -11,7 +11,7 @@ class homePage extends StatefulWidget {
 }
 
 class _homePageState extends State<homePage> {
-  CalendarFormat _calendarFormat = CalendarFormat.month;
+  final CalendarFormat _calendarFormat = CalendarFormat.month;
   DateTime _focusedDay = DateTime.now();
   DateTime _selectedDay = DateTime.now();
 
