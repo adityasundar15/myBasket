@@ -104,6 +104,23 @@ class DatabaseHelper {
       orElse: () => null,
     );
 
+    if (item == null) {
+      await db.update(
+        'shopping_items',
+        {
+          'isBought': 1,
+          'timeBought': DateTime.now().toString(),
+          'fridgeExpiryDate': null,
+          'shelfExpiryDate': null,
+          'category': null,
+        },
+        where: 'name = ?',
+        whereArgs: [name],
+      );
+      print('item $id has been marked as bought, no data found in json');
+      return;
+    }
+
     final fridgeLife = item['FridgeLife'];
     final shelfLife = item['ShelfLife'];
     var category = item['Category'];
