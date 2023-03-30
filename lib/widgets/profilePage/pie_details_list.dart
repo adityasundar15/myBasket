@@ -40,7 +40,7 @@ class PieDetailsList extends StatelessWidget {
                         .format(transForMonth[index].dateOfTransaction),
                     style: const TextStyle(fontSize: 18),
                   ),
-                  trailing: IconButton(onPressed: null, icon: Icon(Icons.edit)),
+                  // trailing: IconButton(onPressed: null, icon: Icon(Icons.edit)),
                 ),
               );
             });
