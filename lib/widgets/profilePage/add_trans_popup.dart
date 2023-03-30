@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-import '../../models/transaction.dart';
-
 class AddTransactionPopUp extends StatefulWidget {
   const AddTransactionPopUp({super.key});
 
@@ -62,7 +60,7 @@ class _AddTransactionPopUpState extends State<AddTransactionPopUp> {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
                   child: const Text(
-                    "Add transaction",
+                    "Add new purchase",
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                 ),

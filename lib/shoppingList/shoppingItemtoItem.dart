@@ -12,10 +12,8 @@ void convertShoppingItemToItem(ShoppingItem shoppingItem) {
       purchaseDate: purchaseDate,
       expiryDate: expiryDate);
   if (allItems.containsKey(convertedItem.expiryDate)) {
-    allItems[convertedItem.expiryDate]!.add(convertedItem);
     kItems[convertedItem.expiryDate]!.add(convertedItem);
   } else {
-    allItems[convertedItem.expiryDate] = [convertedItem];
     kItems[convertedItem.expiryDate] = [convertedItem];
   }
 }
