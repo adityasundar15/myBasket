@@ -3,9 +3,6 @@ import 'package:flutter/material.dart';
 //The color scheme used for the project
 import 'colorScheme.dart';
 
-import 'shoppingList/shoppinglist_page.dart';
-import 'profilePage/profile.dart';
-
 import './screens/alert_list.dart';
 import './screens/bottom_nav_screen.dart';
 import './widgets/profilePage/pie_details_list.dart';

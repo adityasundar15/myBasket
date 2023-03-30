@@ -7,6 +7,9 @@ import 'package:flutter/services.dart';
 import '../models/item.dart';
 import '../myUtils.dart';
 
+//The color scheme used for the project
+import '../colorScheme.dart';
+
 class AlertList extends StatelessWidget {
   // get a list of all events and then filter based on date.
   // final LinkedHashMap<DateTime, List<Item>> kItems;
@@ -40,7 +43,7 @@ class AlertList extends StatelessWidget {
         // print('$k, ${daysBetween(DateTime.now(), k)}');
         // add items that are going to expire 3-5 days from now.
         if (daysBetween(DateTime.now(), k) >= 0 &&
-            daysBetween(DateTime.now(), k) <= 5) {
+            daysBetween(DateTime.now(), k) <= 21) {
           for (int i = 0; i < kItems[k]!.length; i++) {
             items.add(kItems[k]![i]);
             // print(items);
@@ -68,7 +71,7 @@ class AlertList extends StatelessWidget {
                           width: double.infinity,
                           padding: const EdgeInsets.symmetric(
                               vertical: 5, horizontal: 15),
-                          color: Colors.purple[100],
+                          color: ColorOptions.colorscheme[100],
                           child: Text(
                             DateFormat.yMd()
                                 .format(itemsToDisp[index].expiryDate),
