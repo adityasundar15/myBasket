@@ -27,12 +27,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
         }).then((data) {
       if (data['title']!.isEmpty) {
         setState(() {
-          return allTransactions.add(Transaction(
+          allTransactions.add(Transaction(
               dateOfTransaction: data['date'], amount: data['amount']));
         });
       } else {
         setState(() {
-          return allTransactions.add(Transaction(
+          allTransactions.add(Transaction(
               dateOfTransaction: data['date'], amount: data['amount']));
         });
       }
@@ -59,7 +59,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           children: [
             Container(
                 width: double.infinity,
-                child: const ProfilePieCard(
+                child: ProfilePieCard(
                   getPieData: givePieData,
                 )),
             ProfileBarCard(data: barData),

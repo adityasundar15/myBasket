@@ -45,7 +45,6 @@ Map<int, double> yearlyTransactions = getYearlyTransactions();
 final double barWidth = 12;
 
 // pie data moved to profile screen
-
 List<PieChartSectionData> givePieData(double totalBudget) {
   double amountSpentThisMonth = getAmountForMonth(DateTime.now().month);
   return [

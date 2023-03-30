@@ -7,6 +7,9 @@ import '../models/item.dart';
 import '../myUtils.dart';
 import '../widgets/stockPage/stock_item_list.dart';
 
+import '../widgets/stockPage/add_item.dart';
+import '../models/returnItemData.dart';
+
 class StockScreen extends StatefulWidget {
   const StockScreen({super.key});
 
@@ -40,6 +43,26 @@ class _StockScreenState extends State<StockScreen> {
 
   List<Item> _getItemsForDay(DateTime date) {
     return kItems[date] ?? [];
+  }
+
+  void showAddItem(BuildContext context) {
+    showModalBottomSheet(
+        context: context,
+        builder: (builderContext) {
+          return GestureDetector(
+              onTap: null,
+              behavior: HitTestBehavior.opaque,
+              // display what should be inside the modal sheet.
+              child: AddItemDialog());
+        }).then((data) {
+      if (!kItems.keys.contains(data.expiryDate)) {
+        kItems[data.expiryDate] = [];
+      }
+      setState(() {
+        kItems[data.expiryDate]?.add(data);
+        print(kItems);
+      });
+    });
   }
 
   @override
@@ -113,9 +136,11 @@ class _StockScreenState extends State<StockScreen> {
           ),
         )
       ]),
-      floatingActionButton: const FloatingActionButton(
-        onPressed: null,
-        child: Icon(Icons.add),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          showAddItem(context);
+        },
+        child: const Icon(Icons.add),
       ),
     );
   }
