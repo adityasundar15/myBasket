@@ -6,10 +6,13 @@ import 'package:intl/intl.dart';
 
 //Used for the sort dialog box animation
 import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';
+import 'package:shopping_list/shoppingList/shoppingItemtoItem.dart';
 
 import '/colorScheme.dart'; //Color scheme of project
 import 'db_helper.dart'; //Database helper
 import 'shopping_item.dart'; //The ShoppingItem object
+
+import '../myUtils.dart';
 
 class ShoppingList extends StatefulWidget {
   const ShoppingList({Key? key}) : super(key: key);
@@ -451,6 +454,7 @@ class _ShoppingListState extends State<ShoppingList> {
                         if (item.isBought) {
                           item.timeBought = DateTime.now().toString();
                           DatabaseHelper.instance.buyItem(item.id!, item.name);
+                          convertShoppingItemToItem(item);
                         } else {
                           item.timeBought = null;
                           DatabaseHelper.instance.unbuyItem(item.id!);
