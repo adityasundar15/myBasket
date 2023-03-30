@@ -3,11 +3,11 @@ import 'shopping_item.dart';
 import '../myUtils.dart';
 
 void convertShoppingItemToItem(ShoppingItem shoppingItem) {
-  final expiryDate = DateTime.parse(shoppingItem.fridgeExpiryDate!);
-  final purchaseDate = shoppingItem.timeBought != null
+  var expiryDate = DateTime.parse(shoppingItem.fridgeExpiryDate!);
+  var purchaseDate = shoppingItem.timeBought != null
       ? DateTime.parse(shoppingItem.timeBought!)
       : DateTime.now();
-  final convertedItem = Item(
+  var convertedItem = Item(
       title: shoppingItem.name,
       purchaseDate: purchaseDate,
       expiryDate: expiryDate);

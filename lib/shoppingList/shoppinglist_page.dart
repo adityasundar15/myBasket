@@ -406,6 +406,19 @@ class _ShoppingListState extends State<ShoppingList> {
     return tempshoppingItems;
   }
 
+  void isBoughtChecker(ShoppingItem item) async {
+    if (item.isBought) {
+      item.timeBought = null;
+      DatabaseHelper.instance.unbuyItem(item.id!);
+    } else {
+      item.timeBought = DateTime.now().toString();
+      ShoppingItem shoppingitem =
+          await DatabaseHelper.instance.buyItem(item.id!, item.name);
+      item = shoppingitem;
+      convertShoppingItemToItem(shoppingitem);
+    }
+  }
+
   Widget _buildItem(ShoppingItem item, int index) {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 500),
@@ -449,16 +462,9 @@ class _ShoppingListState extends State<ShoppingList> {
                   child: Checkbox(
                     value: item.isBought,
                     onChanged: (value) {
+                      isBoughtChecker(item);
                       setState(() {
                         item.isBought = value!;
-                        if (item.isBought) {
-                          item.timeBought = DateTime.now().toString();
-                          DatabaseHelper.instance.buyItem(item.id!, item.name);
-                          convertShoppingItemToItem(item);
-                        } else {
-                          item.timeBought = null;
-                          DatabaseHelper.instance.unbuyItem(item.id!);
-                        }
                         if (itemFilter != 0) {
                           //Uncomment below code if you want to update list real-time in bought and unbought views
                           //_shoppingItemsFuture = _loadItems(itemFilter);

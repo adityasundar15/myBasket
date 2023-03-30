@@ -8,7 +8,6 @@ import '../myUtils.dart';
 import '../widgets/stockPage/stock_item_list.dart';
 
 import '../widgets/stockPage/add_item.dart';
-import '../models/returnItemData.dart';
 
 class StockScreen extends StatefulWidget {
   const StockScreen({super.key});
@@ -53,7 +52,7 @@ class _StockScreenState extends State<StockScreen> {
               onTap: null,
               behavior: HitTestBehavior.opaque,
               // display what should be inside the modal sheet.
-              child: AddItemDialog());
+              child: const AddItemDialog());
         }).then((data) {
       if (!kItems.keys.contains(data.expiryDate)) {
         kItems[data.expiryDate] = [];

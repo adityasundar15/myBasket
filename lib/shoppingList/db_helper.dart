@@ -92,7 +92,7 @@ class DatabaseHelper {
     print('$id has been removed');
   }
 
-  Future<void> buyItem(int id, String name) async {
+  Future<ShoppingItem> buyItem(int id, String name) async {
     final db = await database;
 
     // Read the JSON data from the file
@@ -119,7 +119,14 @@ class DatabaseHelper {
         whereArgs: [name],
       );
       print('item $id has been marked as bought, no data found in json');
-      return;
+      final List<Map<String, dynamic>> records = await db.query(
+        'shopping_items',
+        where: 'id = ?',
+        whereArgs: [id],
+      );
+      final record = records.first;
+      ShoppingItem shoppingItem = ShoppingItem.fromMap(record);
+      return shoppingItem;
     }
 
     final fridgeLife = item['FridgeLife'];
@@ -158,6 +165,14 @@ class DatabaseHelper {
       whereArgs: [name],
     );
     print('item $id has been marked as bought');
+    final List<Map<String, dynamic>> records = await db.query(
+      'shopping_items',
+      where: 'id = ?',
+      whereArgs: [id],
+    );
+    final record = records.first;
+    ShoppingItem shoppingItem = ShoppingItem.fromMap(record);
+    return shoppingItem;
   }
 
   Future<void> unbuyItem(int id) async {

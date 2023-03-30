@@ -1,7 +1,8 @@
 import 'package:fl_chart/fl_chart.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import './models/transaction.dart';
+
+import '/colorScheme.dart'; //Color scheme of project
 
 double totalBudget = 200.0;
 
@@ -51,12 +52,12 @@ List<PieChartSectionData> givePieData(double totalBudget) {
     PieChartSectionData(
         value: amountSpentThisMonth,
         title: '',
-        color: Colors.purple,
+        color: ColorOptions.colorscheme[900],
         radius: 100),
     PieChartSectionData(
         value: totalBudget - amountSpentThisMonth,
         title: '',
-        color: Colors.grey[300],
+        color: ColorOptions.colorscheme[100],
         radius: 100)
   ];
 }
@@ -69,6 +70,7 @@ List<BarChartGroupData> getBarData() {
         x: i,
         barRods: [
           BarChartRodData(
+              color: ColorOptions.colorscheme[900],
               toY: yearlyTransactions[i] ?? 0,
               width: barWidth,
               borderRadius: BorderRadius.zero)
@@ -80,51 +82,3 @@ List<BarChartGroupData> getBarData() {
 }
 
 List<BarChartGroupData> barData = getBarData();
-
-// final List<BarChartGroupData> barData = [
-//   BarChartGroupData(
-//     x: 0,
-//     barRods: [
-//       BarChartRodData(
-//           toY: yearlyTransactions[1],
-//           width: barWidth,
-//           borderRadius: BorderRadius.zero)
-//     ],
-//   ),
-//   BarChartGroupData(x: 1, barRods: [
-//     BarChartRodData(toY: 10, width: barWidth, borderRadius: BorderRadius.zero)
-//   ]),
-//   BarChartGroupData(x: 2, barRods: [
-//     BarChartRodData(toY: 10, width: barWidth, borderRadius: BorderRadius.zero)
-//   ]),
-//   BarChartGroupData(x: 3, barRods: [
-//     BarChartRodData(toY: 10, width: barWidth, borderRadius: BorderRadius.zero)
-//   ]),
-//   BarChartGroupData(x: 4, barRods: [
-//     BarChartRodData(toY: 10, width: barWidth, borderRadius: BorderRadius.zero)
-//   ]),
-//   BarChartGroupData(x: 5, barRods: [
-//     BarChartRodData(toY: 10, width: barWidth, borderRadius: BorderRadius.zero)
-//   ]),
-//   BarChartGroupData(x: 6, barRods: [
-//     BarChartRodData(toY: 10, width: barWidth, borderRadius: BorderRadius.zero)
-//   ]),
-//   BarChartGroupData(x: 7, barRods: [
-//     BarChartRodData(toY: 10, width: barWidth, borderRadius: BorderRadius.zero)
-//   ]),
-//   BarChartGroupData(x: 8, barRods: [
-//     BarChartRodData(toY: 10, width: barWidth, borderRadius: BorderRadius.zero)
-//   ]),
-//   BarChartGroupData(x: 9, barRods: [
-//     BarChartRodData(toY: 10, width: barWidth, borderRadius: BorderRadius.zero)
-//   ]),
-//   BarChartGroupData(x: 10, barRods: [
-//     BarChartRodData(toY: 10, width: barWidth, borderRadius: BorderRadius.zero)
-//   ]),
-//   BarChartGroupData(x: 11, barRods: [
-//     BarChartRodData(toY: 10, width: barWidth, borderRadius: BorderRadius.zero)
-//   ]),
-//   BarChartGroupData(x: 12, barRods: [
-//     BarChartRodData(toY: 10, width: barWidth, borderRadius: BorderRadius.zero)
-//   ]),
-// ];
