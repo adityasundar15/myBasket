@@ -4,6 +4,7 @@ import 'dart:io';
 import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:path_provider/path_provider.dart';
+
 import 'shopping_item.dart'; //The ShoppingItem object
 
 class DatabaseHelper {

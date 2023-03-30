@@ -1,5 +1,3 @@
-import 'dart:math';
-
 class ShoppingItem {
   final int? id;
   String name;

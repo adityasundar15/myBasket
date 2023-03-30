@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import '../../models/item.dart';
-import './edit_expiry.dart';
 
 class StockEachItem extends StatelessWidget {
   final List<Item> itemList;

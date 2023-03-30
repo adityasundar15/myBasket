@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 //The color scheme used for the project
 import 'colorScheme.dart';
 
-import 'homePage/home_page.dart';
 import 'shoppingList/shoppinglist_page.dart';
 import 'profilePage/profile.dart';
 
@@ -23,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: ColorOptions.colorscheme, //using the color scheme
           visualDensity: VisualDensity.adaptivePlatformDensity,
-          primaryColor: Colors.purple),
+          primaryColor: ColorOptions.colorscheme),
       home: const TabScreen(),
       routes: {
         AlertList.routeName: (context) => const AlertList(),

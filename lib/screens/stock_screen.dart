@@ -63,7 +63,7 @@ class _StockScreenState extends State<StockScreen> {
                 children: [
                   // Icon(Icons.calendar_month),
                   Container(
-                    margin: EdgeInsets.all(10),
+                    margin: const EdgeInsets.all(10),
                     // decoration: BoxDecoration(
                     //     borderRadius: BorderRadius.all(Radius.circular(10)),
                     //     border: Border.all(color: Colors.purple)),
@@ -113,9 +113,9 @@ class _StockScreenState extends State<StockScreen> {
           ),
         )
       ]),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: const FloatingActionButton(
         onPressed: null,
-        child: const Icon(Icons.add),
+        child: Icon(Icons.add),
       ),
     );
   }

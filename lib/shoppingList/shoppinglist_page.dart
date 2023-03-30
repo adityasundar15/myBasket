@@ -517,7 +517,10 @@ class _ShoppingListState extends State<ShoppingList> {
           centerTitle: false,
           title: Row(
             children: const [
-              Text('Shopping List'),
+              Text(
+                'Shopping List',
+                style: const TextStyle(fontSize: 28),
+              ),
             ],
           ),
           elevation: 8,

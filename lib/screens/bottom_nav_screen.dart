@@ -31,21 +31,23 @@ class _TabScreenState extends State<TabScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        systemOverlayStyle: const SystemUiOverlayStyle(
-          statusBarColor: Colors.black,
-          statusBarIconBrightness: Brightness.dark,
-          statusBarBrightness: Brightness.light,
-        ),
-        backgroundColor: Colors.transparent,
-        elevation: 0.0,
-        centerTitle: false,
-        title: Text(
-          _pages[_selectedPageIndex]['title'] as String,
-          style: const TextStyle(fontSize: 28),
-        ),
-        foregroundColor: Theme.of(context).primaryColor,
-      ),
+      appBar: _selectedPageIndex != 1
+          ? AppBar(
+              systemOverlayStyle: const SystemUiOverlayStyle(
+                statusBarColor: Colors.black,
+                statusBarIconBrightness: Brightness.dark,
+                statusBarBrightness: Brightness.light,
+              ),
+              backgroundColor: Colors.transparent,
+              elevation: 0.0,
+              centerTitle: false,
+              title: Text(
+                _pages[_selectedPageIndex]['title'] as String,
+                style: const TextStyle(fontSize: 28),
+              ),
+              foregroundColor: Theme.of(context).primaryColor,
+            )
+          : null,
       body: _pages[_selectedPageIndex]['page'] as Widget,
       bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Colors.white,
