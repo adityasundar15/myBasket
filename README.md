@@ -3,11 +3,11 @@
 "Introducing our user-friendly grocery management app that helps reduce food waste and improve shopping habits. Our app allows users to easily track expiry dates, create shopping lists, and set budgets for grocery spending. With features like automated expiry date entry, seamless integration between shopping lists and stock items, and monthly and yearly budget representations, our app simplifies grocery shopping and helps users stay on top of their food inventory. Say goodbye to wasted food and hello to smarter shopping with our app!"
 
 ## Project Functionalities
-- **Grocery Stock
+- **Grocery Stock**
 View items in stock and items that are nearing their expiry. 
-- **Shopping Item
+- **Shopping Item**
 Create and edit a shopping list that works seamlessly with the Stock Screen
-- **Budget Tracking
+- **Budget Tracking**
 Able to track the monthly budget and compare it with previous months in the format of a chart. 
 
 ## Languages Used:
