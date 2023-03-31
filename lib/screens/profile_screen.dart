@@ -28,6 +28,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         setState(() {
           allTransactions.add(Transaction(
               dateOfTransaction: data['date'], amount: data['amount']));
+          givePieData(totalBudget);
           barData = getBarData();
         });
       } else {
@@ -36,6 +37,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               title: data['title'],
               dateOfTransaction: data['date'],
               amount: data['amount']));
+          givePieData(totalBudget);
           barData = getBarData();
         });
       }
