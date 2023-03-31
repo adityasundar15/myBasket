@@ -526,15 +526,17 @@ class _ShoppingListState extends State<ShoppingList> {
           ),
           centerTitle: false,
           title: Row(
-            children: const [
+            children: [
               Text(
                 'Shopping List',
-                style: const TextStyle(fontSize: 28),
+                style: TextStyle(
+                    fontSize: 28, color: ColorOptions.colorscheme[500]),
               ),
             ],
           ),
-          elevation: 8,
-          shadowColor: ColorOptions.colorscheme[900]!,
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          shadowColor: ColorOptions.colorscheme[50]!,
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(
               bottom: Radius.circular(2),
@@ -552,7 +554,7 @@ class _ShoppingListState extends State<ShoppingList> {
                   });
                   _shoppingItemsFuture = _loadItems(itemFilter);
                 },
-                color: ColorOptions.colorscheme[50]?.withOpacity(0.60),
+                color: ColorOptions.colorscheme[900]?.withOpacity(0.60),
                 selectedColor: ColorOptions.colorscheme[900],
                 borderRadius: BorderRadius.circular(7.0),
                 borderColor: ColorOptions.colorscheme[300]?.withOpacity(0.60),
