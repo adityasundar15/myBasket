@@ -32,16 +32,16 @@ Note: For the app to work properly, you will need to have Flutter and its depend
 ## App Preview
 
 <img src="https://user-images.githubusercontent.com/54789494/229184343-056a7920-8932-4c00-b2b4-6fad4d03f038.png" width=20%>
-Landing page of the application showcasing the stock screen. 
-
-
+Landing page of the application showcasing the stock screen.  
+  
+  
 <img src="https://user-images.githubusercontent.com/54789494/229184624-39d79db7-95c6-4c8d-b44d-044606827059.png" width=20%>
-Expiry Alerts for items that are nearing its expiry.
-
-
+Expiry Alerts for items that are nearing its expiry.  
+  
+  
 <img src="https://user-images.githubusercontent.com/54789494/229184712-acc494cf-2290-4d4c-8c95-e2be3a33e112.png" width=20%>
-Shopping list of the application.
-
-
+Shopping list of the application.  
+  
+  
 <img src="https://user-images.githubusercontent.com/54789494/229184811-35600b7c-21f4-4dc0-8ee3-2ff6b5dae1da.png" width=20%>
 The profile screen showcasing the budget tracking feature.
