@@ -10,15 +10,16 @@ class BarDetailsList extends StatelessWidget {
 
   Widget displayAllYearlyTransactions() {
     return SizedBox(
-      height: 700,
+      height: 750,
       child: ListView.builder(
         itemCount: yearlyTransactions.length,
         itemBuilder: (context, index) {
           return Container(
             margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 1),
             child: Card(
-              color: ColorOptions.colorscheme[500],
+              shadowColor: Colors.transparent,
               shape: RoundedRectangleBorder(
+                  side: BorderSide(color: ColorOptions.colorscheme[900]!),
                   borderRadius: BorderRadius.circular(15)),
               child: Padding(
                 padding: const EdgeInsets.all(15),
@@ -27,13 +28,13 @@ class BarDetailsList extends StatelessWidget {
                     Text(
                       '${DateFormat.MMMM().format(DateTime(0, index + 1))}: ',
                       style: TextStyle(
-                          color: ColorOptions.colorscheme[50],
+                          color: ColorOptions.colorscheme[900],
                           fontSize: 18,
                           fontWeight: FontWeight.bold),
                     ),
                     Text('\$${yearlyTransactions[index]}',
                         style: TextStyle(
-                            color: ColorOptions.colorscheme[50],
+                            color: ColorOptions.colorscheme[800],
                             fontSize: 18,
                             fontWeight: FontWeight.bold))
                   ],

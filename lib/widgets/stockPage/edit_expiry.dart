@@ -21,8 +21,8 @@ class _EditExpiryDialogState extends State<EditExpiryDialog> {
     showDatePicker(
             context: context,
             initialDate: widget.editingItem.expiryDate,
-            firstDate: DateTime.now().subtract(const Duration(days: 1)),
-            lastDate: DateTime.now().add(const Duration(days: 30)))
+            firstDate: DateTime.now().subtract(const Duration(days: 30)),
+            lastDate: DateTime.now().add(const Duration(days: 700)))
         .then((value) {
       if (value == null) {
         return;

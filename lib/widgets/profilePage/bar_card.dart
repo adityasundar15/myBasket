@@ -47,6 +47,11 @@ class ProfileBarCard extends StatelessWidget {
                 width: 325,
                 child: BarChart(
                   BarChartData(
+                    barTouchData: BarTouchData(
+                        touchTooltipData: BarTouchTooltipData(
+                            tooltipBgColor: Colors.white,
+                            tooltipHorizontalAlignment:
+                                FLHorizontalAlignment.center)),
                     titlesData: FlTitlesData(
                       show: false,
                     ),

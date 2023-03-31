@@ -37,9 +37,6 @@ Map<int, double> getYearlyTransactions() {
 
 Map<int, double> yearlyTransactions = getYearlyTransactions();
 
-// Map<int, double> yearlyTransactions = getYearlyTransactions();
-// print(yearlyTransactions)
-
 const double barWidth = 12;
 
 // pie data moved to profile screen
@@ -58,6 +55,8 @@ List<PieChartSectionData> givePieData(double totalBudget) {
         radius: 100)
   ];
 }
+
+List<PieChartSectionData> pieData = givePieData(totalBudget);
 
 List<BarChartGroupData> getBarData() {
   List<BarChartGroupData> myData = [];
