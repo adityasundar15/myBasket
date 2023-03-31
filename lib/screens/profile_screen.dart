@@ -33,22 +33,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
       } else {
         setState(() {
           allTransactions.add(Transaction(
-              dateOfTransaction: data['date'], amount: data['amount']));
+              title: data['title'],
+              dateOfTransaction: data['date'],
+              amount: data['amount']));
         });
       }
       ;
     });
   }
-
-  // void addTransaction(
-  //     {String? title, required DateTime date, required double amount}) {
-  //   if (title!.isEmpty) {
-  //     allTransactions.add(Transaction(dateOfTransaction: date, amount: amount));
-  //   } else {
-  //     allTransactions.add(
-  //         Transaction(title: title, dateOfTransaction: date, amount: amount));
-  //   }
-  // }
 
   @override
   Widget build(BuildContext context) {
