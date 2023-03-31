@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import '../../chart_data.dart';
 
 class ChangeBudgetDialog extends StatefulWidget {
@@ -17,7 +15,7 @@ class _ChangeBudgetDialogState extends State<ChangeBudgetDialog> {
 
   void _submitData() {
     final double enteredBudget = double.parse(totalBudgetController.text);
-    print(enteredBudget);
+    // print(enteredBudget);
     if (enteredBudget <= 0) {
       return;
     }

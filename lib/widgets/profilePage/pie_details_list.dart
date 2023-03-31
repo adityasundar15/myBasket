@@ -123,7 +123,7 @@ class _PieDetailsListState extends State<PieDetailsList> {
           const SizedBox(
             height: 20,
           ),
-          Container(
+          SizedBox(
             width: double.infinity,
             height: 600,
             child: displayDetailsForMonth(allTransactions, selectedMonth),

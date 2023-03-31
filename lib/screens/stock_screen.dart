@@ -62,7 +62,7 @@ class _StockScreenState extends State<StockScreen> {
       }
       setState(() {
         kItems[data.expiryDate]?.add(data);
-        print(kItems);
+        // print(kItems);
       });
     });
   }

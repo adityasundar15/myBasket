@@ -15,7 +15,6 @@ class EditExpiryDialog extends StatefulWidget {
 }
 
 class _EditExpiryDialogState extends State<EditExpiryDialog> {
-  @override
   DateTime? _selectedDate;
 
   void _presentDatePicker() {
@@ -36,7 +35,7 @@ class _EditExpiryDialogState extends State<EditExpiryDialog> {
   }
 
   void _submitData() {
-    print(_selectedDate);
+    // print(_selectedDate);
     Navigator.of(context).pop(returnItemData(
         item: widget.editingItem, newExpiryDate: _selectedDate!));
   }

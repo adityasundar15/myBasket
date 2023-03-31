@@ -40,7 +40,7 @@ Map<int, double> yearlyTransactions = getYearlyTransactions();
 // Map<int, double> yearlyTransactions = getYearlyTransactions();
 // print(yearlyTransactions)
 
-final double barWidth = 12;
+const double barWidth = 12;
 
 // pie data moved to profile screen
 List<PieChartSectionData> givePieData(double totalBudget) {

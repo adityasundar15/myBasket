@@ -68,6 +68,5 @@ class BarDetailsList extends StatelessWidget {
         children: [displayAllYearlyTransactions()],
       ),
     );
-    ;
   }
 }
