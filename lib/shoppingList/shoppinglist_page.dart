@@ -92,6 +92,7 @@ class _ShoppingListState extends State<ShoppingList> {
     showModalBottomSheet(
       backgroundColor: Colors.transparent,
       context: context,
+      isScrollControlled: true,
       builder: (BuildContext context) {
         return AnimatedPadding(
           padding: MediaQuery.of(context).viewInsets,
@@ -183,6 +184,7 @@ class _ShoppingListState extends State<ShoppingList> {
     showModalBottomSheet(
       context: context,
       backgroundColor: Colors.transparent,
+      isScrollControlled: true,
       builder: (BuildContext context) {
         return AnimatedPadding(
           padding: MediaQuery.of(context).viewInsets,
