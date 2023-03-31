@@ -14,9 +14,9 @@ class TabScreen extends StatefulWidget {
 
 class _TabScreenState extends State<TabScreen> {
   final List<Map<String, Object>> _pages = [
-    {'page': StockScreen(), 'title': 'Current Stock'},
-    {'page': ShoppingList(), 'title': 'Shopping List'},
-    {'page': ProfileScreen(), 'title': 'Profile'}
+    {'page': const StockScreen(), 'title': 'Current Stock'},
+    {'page': const ShoppingList(), 'title': 'Shopping List'},
+    {'page': const ProfileScreen(), 'title': 'Profile'}
   ];
   int _selectedPageIndex = 0;
 

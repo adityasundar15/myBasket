@@ -21,7 +21,7 @@ class StockEachItem extends StatelessWidget {
       subtitle: Text(
           'Expires on: ${DateFormat.yMd().format(itemList[index].expiryDate)}'),
       trailing: IconButton(
-        icon: Icon(Icons.edit),
+        icon: const Icon(Icons.edit),
         onPressed: showSheet,
       ),
     );

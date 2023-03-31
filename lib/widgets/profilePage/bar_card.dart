@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
+import 'package:shopping_list/widgets/profilePage/bar_details_list.dart';
 import '../../../chart_data.dart';
 
 class ProfileBarCard extends StatelessWidget {
@@ -11,12 +12,10 @@ class ProfileBarCard extends StatelessWidget {
   Widget build(BuildContext context) {
     double getMaxVal() {
       var thevalue = 0.0;
-      var thekey;
 
       yearlyTransactions.forEach((k, v) {
         if (v > thevalue) {
           thevalue = v;
-          thekey = k;
         }
       });
       return thevalue + 10;
@@ -42,7 +41,7 @@ class ProfileBarCard extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(10),
+            padding: const EdgeInsets.symmetric(horizontal: 10),
             child: SizedBox(
                 height: 200,
                 width: 325,
@@ -74,14 +73,17 @@ class ProfileBarCard extends StatelessWidget {
                   ),
                 )),
           ),
-          // Container(
-          //     width: double.infinity,
-          //     alignment: Alignment.centerRight,
-          //     padding: const EdgeInsets.all(10),
-          //     child: TextButton(
-          //       onPressed: null,
-          //       child: Text('Details >', style: TextStyle(fontSize: 18)),
-          //     ))
+          Container(
+              width: double.infinity,
+              alignment: Alignment.centerLeft,
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: TextButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(BarDetailsList.routeName);
+                },
+                child: const Text('Check Details >',
+                    style: TextStyle(fontSize: 18)),
+              ))
         ],
       ),
     );

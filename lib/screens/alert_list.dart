@@ -1,4 +1,3 @@
-import 'dart:collection';
 import 'package:intl/intl.dart';
 
 import 'package:flutter/material.dart';
@@ -6,6 +5,9 @@ import 'package:flutter/services.dart';
 
 import '../models/item.dart';
 import '../myUtils.dart';
+
+//The color scheme used for the project
+import '../colorScheme.dart';
 
 class AlertList extends StatelessWidget {
   // get a list of all events and then filter based on date.
@@ -40,7 +42,7 @@ class AlertList extends StatelessWidget {
         // print('$k, ${daysBetween(DateTime.now(), k)}');
         // add items that are going to expire 3-5 days from now.
         if (daysBetween(DateTime.now(), k) >= 0 &&
-            daysBetween(DateTime.now(), k) <= 5) {
+            daysBetween(DateTime.now(), k) <= 21) {
           for (int i = 0; i < kItems[k]!.length; i++) {
             items.add(kItems[k]![i]);
             // print(items);
@@ -68,7 +70,7 @@ class AlertList extends StatelessWidget {
                           width: double.infinity,
                           padding: const EdgeInsets.symmetric(
                               vertical: 5, horizontal: 15),
-                          color: Colors.purple[100],
+                          color: ColorOptions.colorscheme[100],
                           child: Text(
                             DateFormat.yMd()
                                 .format(itemsToDisp[index].expiryDate),
@@ -86,7 +88,10 @@ class AlertList extends StatelessWidget {
               );
             });
       }
-      return Text('No items to display.');
+      return const Padding(
+        padding: EdgeInsets.all(8.0),
+        child: Text('No items to display.'),
+      );
     }
 
     return Scaffold(
@@ -105,7 +110,7 @@ class AlertList extends StatelessWidget {
         ),
         foregroundColor: Theme.of(context).primaryColor,
       ),
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         height: 700,
         child: displayListForDate(),

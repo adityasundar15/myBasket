@@ -6,15 +6,12 @@ import '/colorScheme.dart'; //Color scheme of project
 
 double totalBudget = 200.0;
 
-final List<Transaction> allTransactions = [
+List<Transaction> allTransactions = [
   Transaction(dateOfTransaction: DateTime(2023, 1, 17), amount: 30.0),
   Transaction(dateOfTransaction: DateTime(2023, 2, 17), amount: 40.0),
   Transaction(dateOfTransaction: DateTime(2023, 3, 3), amount: 20.0),
   Transaction(dateOfTransaction: DateTime(2023, 3, 3), amount: 20.0),
   Transaction(dateOfTransaction: DateTime(2023, 3, 19), amount: 20.0),
-  Transaction(dateOfTransaction: DateTime(2023, 3, 29), amount: 20.0),
-  Transaction(dateOfTransaction: DateTime(2023, 3, 30), amount: 50.0),
-  Transaction(dateOfTransaction: DateTime(2023, 4, 3), amount: 50.0),
   Transaction(dateOfTransaction: DateTime(2023, 4, 5), amount: 50.0),
   Transaction(dateOfTransaction: DateTime(2023, 4, 17), amount: 50.0),
   Transaction(dateOfTransaction: DateTime(2023, 5, 17), amount: 10.0),
@@ -43,7 +40,7 @@ Map<int, double> yearlyTransactions = getYearlyTransactions();
 // Map<int, double> yearlyTransactions = getYearlyTransactions();
 // print(yearlyTransactions)
 
-final double barWidth = 12;
+const double barWidth = 12;
 
 // pie data moved to profile screen
 List<PieChartSectionData> givePieData(double totalBudget) {
@@ -64,13 +61,15 @@ List<PieChartSectionData> givePieData(double totalBudget) {
 
 List<BarChartGroupData> getBarData() {
   List<BarChartGroupData> myData = [];
+  // update the yearly transactions
+  yearlyTransactions = getYearlyTransactions();
   for (int i = 0; i < 12; i++) {
     myData.add(
       BarChartGroupData(
         x: i,
         barRods: [
           BarChartRodData(
-              color: ColorOptions.colorscheme[900],
+              color: ColorOptions.colorscheme[500],
               toY: yearlyTransactions[i] ?? 0,
               width: barWidth,
               borderRadius: BorderRadius.zero)

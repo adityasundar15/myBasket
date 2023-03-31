@@ -5,10 +5,18 @@ import 'package:intl/intl.dart';
 
 import '../../models/transaction.dart';
 
-class PieDetailsList extends StatelessWidget {
+class PieDetailsList extends StatefulWidget {
   const PieDetailsList({super.key});
 
   static const routeName = '/pie-details-list';
+
+  @override
+  State<PieDetailsList> createState() => _PieDetailsListState();
+}
+
+class _PieDetailsListState extends State<PieDetailsList> {
+  // default selected month
+  int selectedMonth = DateTime.now().month;
 
   Widget displayDetailsForMonth(List<Transaction> trans, int month) {
     // List<Transaction>? mytrans = getTransactionForMonth(trans, month);
@@ -20,7 +28,9 @@ class PieDetailsList extends StatelessWidget {
     });
 
     return transForMonth.isEmpty
-        ? const Text('No transactions to display.')
+        ? const Center(
+            child: Text('No purchases to display.',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)))
         : ListView.builder(
             itemCount: transForMonth.length,
             itemBuilder: (context, index) {
@@ -35,11 +45,23 @@ class PieDetailsList extends StatelessWidget {
                         child: FittedBox(
                             child: Text('\$${transForMonth[index].amount}'))),
                   ),
-                  title: Text(
-                    DateFormat('d MMMM y')
-                        .format(transForMonth[index].dateOfTransaction),
-                    style: const TextStyle(fontSize: 18),
-                  ),
+                  title: transForMonth[index].title == null
+                      ? Text(
+                          DateFormat('d MMMM y')
+                              .format(transForMonth[index].dateOfTransaction),
+                          style: const TextStyle(fontSize: 18),
+                        )
+                      : Text(
+                          '${transForMonth[index].title}',
+                          style: const TextStyle(fontSize: 18),
+                        ),
+                  subtitle: transForMonth[index].title != null
+                      ? Text(
+                          DateFormat('d MMMM y')
+                              .format(transForMonth[index].dateOfTransaction),
+                          style: const TextStyle(fontSize: 15),
+                        )
+                      : null,
                   // trailing: IconButton(onPressed: null, icon: Icon(Icons.edit)),
                 ),
               );
@@ -70,19 +92,27 @@ class PieDetailsList extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               TextButton(
-                  onPressed: null,
+                  onPressed: () {
+                    setState(() {
+                      selectedMonth -= 1;
+                    });
+                  },
                   child: Text(
                     "<",
                     style: TextStyle(
                         fontSize: 24, color: Theme.of(context).primaryColor),
                   )),
               Text(
-                DateFormat.MMMM().format(DateTime.now()).toString(),
+                DateFormat.MMMM().format(DateTime(0, selectedMonth)).toString(),
                 style: TextStyle(
                     fontSize: 24, color: Theme.of(context).primaryColor),
               ),
               TextButton(
-                  onPressed: null,
+                  onPressed: () {
+                    setState(() {
+                      selectedMonth += 1;
+                    });
+                  },
                   child: Text(
                     ">",
                     style: TextStyle(
@@ -93,11 +123,10 @@ class PieDetailsList extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          Container(
+          SizedBox(
             width: double.infinity,
             height: 600,
-            child:
-                displayDetailsForMonth(allTransactions, DateTime.now().month),
+            child: displayDetailsForMonth(allTransactions, selectedMonth),
           )
         ],
       ),

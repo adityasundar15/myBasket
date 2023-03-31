@@ -7,6 +7,9 @@ import '../models/item.dart';
 import '../myUtils.dart';
 import '../widgets/stockPage/stock_item_list.dart';
 
+//The color scheme used for the project
+import '../colorScheme.dart';
+
 import '../widgets/stockPage/add_item.dart';
 
 class StockScreen extends StatefulWidget {
@@ -59,7 +62,7 @@ class _StockScreenState extends State<StockScreen> {
       }
       setState(() {
         kItems[data.expiryDate]?.add(data);
-        print(kItems);
+        // print(kItems);
       });
     });
   }
@@ -69,39 +72,42 @@ class _StockScreenState extends State<StockScreen> {
     return Scaffold(
       body: Column(children: [
         Container(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: Text(
-                  'Expiry dates',
-                  style: TextStyle(
-                      fontSize: 20, color: Theme.of(context).primaryColor),
+          margin: const EdgeInsets.symmetric(horizontal: 15),
+          child: ElevatedButton(
+            style: ButtonStyle(
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(25.0),
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  // Icon(Icons.calendar_month),
-                  Container(
-                    margin: const EdgeInsets.all(10),
-                    // decoration: BoxDecoration(
-                    //     borderRadius: BorderRadius.all(Radius.circular(10)),
-                    //     border: Border.all(color: Colors.purple)),
-                    child: IconButton(
-                        onPressed: () {
-                          Navigator.of(context).pushNamed(AlertList.routeName);
-                        },
-                        icon: Icon(
-                          size: 32,
-                          Icons.warning_amber,
-                          color: Colors.amber[700],
-                        )),
+            ),
+            onPressed: () {
+              Navigator.of(context).pushNamed(AlertList.routeName);
+            },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  margin: const EdgeInsets.all(10),
+                  // decoration: BoxDecoration(
+                  //     borderRadius: BorderRadius.all(Radius.circular(10)),
+                  //     border: Border.all(color: Colors.purple)),
+                  child: Icon(
+                    size: 28,
+                    Icons.warning_amber,
+                    color: ColorOptions.colorscheme[50],
                   ),
-                ],
-              )
-            ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Text(
+                    'Expiry alerts',
+                    style: TextStyle(
+                        fontSize: 24, color: ColorOptions.colorscheme[50]),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
         TableCalendar<Item>(
@@ -124,6 +130,14 @@ class _StockScreenState extends State<StockScreen> {
             _focusedDate = focusedDate;
           },
           eventLoader: _getItemsForDay,
+          calendarStyle: CalendarStyle(
+            selectedDecoration: BoxDecoration(
+              color: ColorOptions.colorscheme[500]!,
+              shape: BoxShape.circle,
+            ),
+            todayDecoration: BoxDecoration(
+                color: ColorOptions.colorscheme[300]!, shape: BoxShape.circle),
+          ),
         ),
         const SizedBox(height: 8.0),
         Expanded(
