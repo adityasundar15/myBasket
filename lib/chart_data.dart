@@ -6,7 +6,7 @@ import '/colorScheme.dart'; //Color scheme of project
 
 double totalBudget = 200.0;
 
-final List<Transaction> allTransactions = [
+List<Transaction> allTransactions = [
   Transaction(dateOfTransaction: DateTime(2023, 1, 17), amount: 30.0),
   Transaction(dateOfTransaction: DateTime(2023, 2, 17), amount: 40.0),
   Transaction(dateOfTransaction: DateTime(2023, 3, 3), amount: 20.0),
@@ -61,13 +61,15 @@ List<PieChartSectionData> givePieData(double totalBudget) {
 
 List<BarChartGroupData> getBarData() {
   List<BarChartGroupData> myData = [];
+  // update the yearly transactions
+  yearlyTransactions = getYearlyTransactions();
   for (int i = 0; i < 12; i++) {
     myData.add(
       BarChartGroupData(
         x: i,
         barRods: [
           BarChartRodData(
-              color: ColorOptions.colorscheme[900],
+              color: ColorOptions.colorscheme[500],
               toY: yearlyTransactions[i] ?? 0,
               width: barWidth,
               borderRadius: BorderRadius.zero)
