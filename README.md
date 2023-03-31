@@ -1,16 +1,30 @@
-# shopping_list
+# myBasket
 
-A new Flutter project.
+"Introducing our user-friendly grocery management app that helps reduce food waste and improve shopping habits. Our app allows users to easily track expiry dates, create shopping lists, and set budgets for grocery spending. With features like automated expiry date entry, seamless integration between shopping lists and stock items, and monthly and yearly budget representations, our app simplifies grocery shopping and helps users stay on top of their food inventory. Say goodbye to wasted food and hello to smarter shopping with our app!"
 
-## Getting Started
+## Project Functionalities
+- **Grocery Stock
+View items in stock and items that are nearing their expiry. 
+- **Shopping Item
+Create and edit a shopping list that works seamlessly with the Stock Screen
+- **Budget Tracking
+Able to track the monthly budget and compare it with previous months in the format of a chart. 
 
-This project is a starting point for a Flutter application.
+## Languages Used:
+Dart (Flutter)
 
-A few resources to get you started if this is your first Flutter project:
+## How to run our app:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1. Clone this repository to your local machine.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+2. Install Flutter and its dependencies by following the official documentation based on your operating system.
+
+3. Open the cloned repository in your preferred code editor.
+
+4. Connect an Android or iOS device to your computer or open an emulator.
+
+5. In the terminal, navigate to the root directory of the project and run flutter pub get to install the required packages.
+
+6. Run the command flutter run to start the application on the connected device or emulator.
+
+Note: For the app to work properly, you will need to have Flutter and its dependencies installed on your machine. If you don't have it installed, you can download it from the official Flutter website.
