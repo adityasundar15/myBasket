@@ -31,7 +31,7 @@ Note: For the app to work properly, you will need to have Flutter and its depend
 
 ## App Preview
 
-![image](https://user-images.githubusercontent.com/54789494/229184343-056a7920-8932-4c00-b2b4-6fad4d03f038.png)
+![image](https://user-images.githubusercontent.com/54789494/229184343-056a7920-8932-4c00-b2b4-6fad4d03f038.png | width = 100)
 Landing page of the application showcasing the stock screen. 
 
 ![image](https://user-images.githubusercontent.com/54789494/229184624-39d79db7-95c6-4c8d-b44d-044606827059.png)
