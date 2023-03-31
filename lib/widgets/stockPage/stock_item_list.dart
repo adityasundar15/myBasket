@@ -1,11 +1,6 @@
-import 'dart:collection';
-
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/material.dart';
 import '../../models/returnItemData.dart';
 import '../../myUtils.dart';
-import 'package:intl/intl.dart';
 
 import '../../models/item.dart';
 import './stock_each_item.dart';
@@ -55,21 +50,6 @@ class _StockItemListState extends State<StockItemList> {
 
   @override
   Widget build(BuildContext context) {
-    print('allItems');
-    for (MapEntry<DateTime, List<Item>> entry in allItems.entries) {
-      print(entry.key); // print the date
-      for (Item item in entry.value) {
-        print("  ${item.title}"); // print each item with an indentation
-      }
-    }
-    print('\nkItems');
-    for (var entry in kItems.entries) {
-      print(entry.key); // print the date key
-      for (var item in entry.value) {
-        print('  ${item.title}'); // print each item
-      }
-    }
-
     return ListView.builder(
       itemCount: widget.itemList.length,
       itemBuilder: (context, index) {

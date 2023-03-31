@@ -12,8 +12,6 @@ import '/colorScheme.dart'; //Color scheme of project
 import 'db_helper.dart'; //Database helper
 import 'shopping_item.dart'; //The ShoppingItem object
 
-import '../myUtils.dart';
-
 class ShoppingList extends StatefulWidget {
   const ShoppingList({Key? key}) : super(key: key);
 
@@ -376,21 +374,21 @@ class _ShoppingListState extends State<ShoppingList> {
                               (a, b) =>
                                   a.name.compareTo(b.name) *
                                   (selectedSortOrderIndex == 0 ? 1 : -1));
-                          print('Sorted by Name');
+                          // print('Sorted by Name');
                           break;
                         case 1: // Date Added
                           tempshoppingItems = [..._shoppingItems]..sort(
                               (a, b) =>
                                   a.id!.compareTo(b.id!) *
                                   (selectedSortOrderIndex == 0 ? 1 : -1));
-                          print('Sorted by Date Added');
+                          // print('Sorted by Date Added');
                           break;
                         case 2: // Quantity
                           tempshoppingItems = [..._shoppingItems]..sort(
                               (a, b) =>
                                   a.quantity.compareTo(b.quantity) *
                                   (selectedSortOrderIndex == 0 ? 1 : -1));
-                          print('Sorted by Quantity');
+                          // print('Sorted by Quantity');
                           break;
                       }
                     });

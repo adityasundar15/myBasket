@@ -23,7 +23,7 @@ class DatabaseHelper {
   }
 
   Future<void> resetDatabase() async {
-    print('DELETING DATABASE AND RESETTING');
+    // print('DELETING DATABASE AND RESETTING');
     final db = await instance.database;
     await db.close();
     Directory documentsDirectory = await getApplicationDocumentsDirectory();
@@ -35,7 +35,7 @@ class DatabaseHelper {
   Future<Database> _initDatabase() async {
     Directory documentsDirectory = await getApplicationDocumentsDirectory();
     String path = join(documentsDirectory.path, 'shopping_list.db');
-    print('$path');
+    // print('$path');
     return await openDatabase(path, version: 1, onCreate: _onCreate);
   }
 
@@ -71,7 +71,7 @@ class DatabaseHelper {
       'isBought': 0,
       'timeBought': null,
     });
-    print('$id, $name, $quantity');
+    // print('$id, $name, $quantity');
     return id;
   }
 
@@ -83,13 +83,13 @@ class DatabaseHelper {
       where: 'id = ?',
       whereArgs: [id],
     );
-    print('item: $id, $newName, $newQuantity; has been updated');
+    // print('item: $id, $newName, $newQuantity; has been updated');
   }
 
   Future<void> removeItem(int id) async {
     final db = await database;
     await db.delete('shopping_items', where: 'id = ?', whereArgs: [id]);
-    print('$id has been removed');
+    // print('$id has been removed');
   }
 
   Future<ShoppingItem> buyItem(int id, String name) async {
@@ -118,7 +118,7 @@ class DatabaseHelper {
         where: 'name = ?',
         whereArgs: [name],
       );
-      print('item $id has been marked as bought, no data found in json');
+      // print('item $id has been marked as bought, no data found in json');
       final List<Map<String, dynamic>> records = await db.query(
         'shopping_items',
         where: 'id = ?',
@@ -164,7 +164,7 @@ class DatabaseHelper {
       where: 'name = ?',
       whereArgs: [name],
     );
-    print('item $id has been marked as bought');
+    // print('item $id has been marked as bought');
     final List<Map<String, dynamic>> records = await db.query(
       'shopping_items',
       where: 'id = ?',
@@ -189,6 +189,6 @@ class DatabaseHelper {
       where: 'id = ?',
       whereArgs: [id],
     );
-    print('item $id has been marked as unbought');
+    // print('item $id has been marked as unbought');
   }
 }

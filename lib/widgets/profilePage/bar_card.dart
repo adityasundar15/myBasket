@@ -12,12 +12,10 @@ class ProfileBarCard extends StatelessWidget {
   Widget build(BuildContext context) {
     double getMaxVal() {
       var thevalue = 0.0;
-      var thekey;
 
       yearlyTransactions.forEach((k, v) {
         if (v > thevalue) {
           thevalue = v;
-          thekey = k;
         }
       });
       return thevalue + 10;
@@ -83,7 +81,8 @@ class ProfileBarCard extends StatelessWidget {
                 onPressed: () {
                   Navigator.of(context).pushNamed(BarDetailsList.routeName);
                 },
-                child: Text('Check Details >', style: TextStyle(fontSize: 18)),
+                child: const Text('Check Details >',
+                    style: TextStyle(fontSize: 18)),
               ))
         ],
       ),

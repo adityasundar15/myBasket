@@ -33,7 +33,7 @@ class _AddTransactionPopUpState extends State<AddTransactionPopUp> {
   void _submitData() {
     final enteredTitle = titleController.text;
     final enteredAmount = double.parse(amountController.text);
-    print('$enteredAmount $enteredTitle');
+    // print('$enteredAmount $enteredTitle');
 
     if (enteredAmount <= 0) {
       return;
@@ -99,6 +99,5 @@ class _AddTransactionPopUpState extends State<AddTransactionPopUp> {
                     onPressed: _submitData, child: const Text("Add Purchase"))
               ])),
     );
-    ;
   }
 }

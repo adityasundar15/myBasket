@@ -1,4 +1,3 @@
-import 'dart:collection';
 import 'package:intl/intl.dart';
 
 import 'package:flutter/material.dart';
@@ -89,7 +88,10 @@ class AlertList extends StatelessWidget {
               );
             });
       }
-      return Text('No items to display.');
+      return const Padding(
+        padding: EdgeInsets.all(8.0),
+        child: Text('No items to display.'),
+      );
     }
 
     return Scaffold(
@@ -108,7 +110,7 @@ class AlertList extends StatelessWidget {
         ),
         foregroundColor: Theme.of(context).primaryColor,
       ),
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         height: 700,
         child: displayListForDate(),

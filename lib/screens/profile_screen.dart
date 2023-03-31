@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fl_chart/fl_chart.dart';
 import '../models/transaction.dart';
 import '../widgets/profilePage/add_trans_popup.dart';
 
@@ -8,7 +7,7 @@ import '../widgets/profilePage/bar_card.dart';
 import '../chart_data.dart';
 
 class ProfileScreen extends StatefulWidget {
-  ProfileScreen({super.key});
+  const ProfileScreen({super.key});
 
   @override
   State<ProfileScreen> createState() => _ProfileScreenState();
@@ -23,7 +22,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               onTap: null,
               behavior: HitTestBehavior.opaque,
               // display what should be inside the modal sheet.
-              child: AddTransactionPopUp());
+              child: const AddTransactionPopUp());
         }).then((data) {
       if (data['title']!.isEmpty) {
         setState(() {
@@ -40,7 +39,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
           barData = getBarData();
         });
       }
-      ;
     });
   }
 
@@ -51,9 +49,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
+            const SizedBox(
                 width: double.infinity,
-                child: const ProfilePieCard(
+                child: ProfilePieCard(
                   getPieData: givePieData,
                 )),
             ProfileBarCard(data: barData),
