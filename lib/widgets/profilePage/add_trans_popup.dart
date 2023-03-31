@@ -18,7 +18,7 @@ class _AddTransactionPopUpState extends State<AddTransactionPopUp> {
             context: context,
             initialDate: DateTime.now(),
             firstDate: DateTime.now().subtract(const Duration(days: 1)),
-            lastDate: DateTime.now().add(const Duration(days: 30)))
+            lastDate: DateTime.now().add(const Duration(days: 200)))
         .then((value) {
       if (value == null) {
         return;
@@ -96,8 +96,7 @@ class _AddTransactionPopUpState extends State<AddTransactionPopUp> {
                   ),
                 ),
                 ElevatedButton(
-                    onPressed: _submitData,
-                    child: const Text("Add Transaction"))
+                    onPressed: _submitData, child: const Text("Add Purchase"))
               ])),
     );
     ;
