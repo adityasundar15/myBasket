@@ -587,11 +587,8 @@ class _ShoppingListState extends State<ShoppingList> {
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 //Image used as loading screen
-                return Center(
-                  child: Image.asset(
-                    'assets/img/icon.png',
-                    width: 200,
-                  ),
+                return const Center(
+                  child: CircularProgressIndicator(),
                 );
               } else if (snapshot.hasError) {
                 return Text('An error has occurred, ${snapshot.error}');
