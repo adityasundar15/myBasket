@@ -331,14 +331,15 @@ class _ShoppingListState extends State<ShoppingList> {
                         onPressed: () {
                           setState(() {
                             selectedSortOrderIndex =
-                                selectedSortOrderIndex != 0 ? 1 : 0;
+                                selectedSortOrderIndex == 0 ? 1 : 0;
                           });
                         },
-                        icon: selectedSortOrderIndex == 0
-                            ? Icon(Icons.arrow_upward,
-                                color: ColorOptions.colorscheme[50])
-                            : Icon(Icons.arrow_downward,
-                                color: ColorOptions.colorscheme[50]),
+                        icon: Icon(
+                          selectedSortOrderIndex == 0
+                              ? Icons.arrow_upward
+                              : Icons.arrow_downward,
+                          color: ColorOptions.colorscheme[50],
+                        ),
                       ),
                     ],
                   ),
@@ -425,7 +426,7 @@ class _ShoppingListState extends State<ShoppingList> {
       curve: Curves.bounceInOut,
       child: Card(
         color: !item.isBought
-            ? ColorOptions.colorscheme[400]!
+            ? ColorOptions.colorscheme[500]!
             : ColorOptions.colorscheme[100],
         elevation: 9,
         margin: const EdgeInsets.all(5),
@@ -556,8 +557,10 @@ class _ShoppingListState extends State<ShoppingList> {
                 },
                 color: ColorOptions.colorscheme[900]?.withOpacity(0.60),
                 selectedColor: ColorOptions.colorscheme[900],
+                selectedBorderColor:
+                    ColorOptions.colorscheme[300]?.withOpacity(0.60),
                 borderRadius: BorderRadius.circular(7.0),
-                borderColor: ColorOptions.colorscheme[300]?.withOpacity(0.60),
+                borderColor: ColorOptions.colorscheme[500]?.withOpacity(0.60),
                 splashColor: ColorOptions.colorscheme[200]?.withOpacity(0.22),
                 fillColor: ColorOptions.colorscheme[100]?.withOpacity(0.8),
                 constraints: const BoxConstraints(
