@@ -6,6 +6,7 @@ import 'package:intl/intl.dart';
 
 //Used for the sort dialog box animation
 import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';
+import 'package:shopping_list/myUtils.dart';
 import 'package:shopping_list/shoppingList/shoppingItemtoItem.dart';
 
 import '/colorScheme.dart'; //Color scheme of project
