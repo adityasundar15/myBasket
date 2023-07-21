@@ -1,5 +1,7 @@
 # myBasket
 
+App showcased at Mini Solution Challenge at Google Headquarters, Shibuya, Japan.
+
 "Introducing our user-friendly grocery management app that helps reduce food waste and improve shopping habits. Our app allows users to easily track expiry dates, create shopping lists, and set budgets for grocery spending. With features like automated expiry date entry, seamless integration between shopping lists and stock items, and monthly and yearly budget representations, our app simplifies grocery shopping and helps users stay on top of their food inventory. Say goodbye to wasted food and hello to smarter shopping with our app!"
 
 ## Project Functionalities
